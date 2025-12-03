@@ -1,0 +1,32 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial;
+color:#fff;
+}
+html, body {
+height: 100%;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #ff0000;
+}
+.box{
+    height: 300px;
+    width: 600px;
+    padding: 1rem;
+    border: 6px solid transparent;
+    background:linear-gradient(rgb(133, 38, 38)) padding-box , conic-gradient(  #fff, #000 , #fff) border-box ;
+    
+}
+
+/* @keyframes rotate{
+    from{
+
+    }
+    to{
+
+    }
+} */
