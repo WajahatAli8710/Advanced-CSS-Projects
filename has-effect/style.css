@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+  color: #fff;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+main {
+  height: fit-content;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  gap: 3rem;
+}
+section {
+  width: 18rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 2px solid white;
+  border-radius: 0.7rem;
+  box-shadow: 0 0 0rem rebeccapurple;
+  background: linear-gradient(black) padding-box,
+    conic-gradient(from var(--rotate), black, rebeccapurple, black) border-box;
+  animation: borderEffect 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+  transition: all 0.3s linear;
+  color: #fff;
+  text-shadow: 0 0 0rem rebeccapurple;
+}
+section:hover {
+  animation-play-state: running;
+  box-shadow: 0 0 3rem rebeccapurple;
+  border: 0.5rem solid transparent;
+  color: rebeccapurple;
+  text-shadow: 0 0 2rem rebeccapurple;
+}
+img {
+  width: 100%;
+}
+h1 {
+  font-size: 2rem;
+}
+p {
+  font-size: 1.2rem;
+}
+
+section:hover {
+  scale: 1.1 !important;
+  opacity: 1 !important;
+}
+
+main:has(section:hover) section {
+  scale: 0.9;
+  opacity: 0.5;
+}
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes borderEffect {
+  from {
+    --rotate: 0deg;
+  }
+  to {
+    --rotate: 360deg;
+  }
+}
+@media (min-width: 900px) {
+  main {
+    height: 100%;
+    flex-direction: row;
+  }
+}
